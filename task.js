@@ -54,10 +54,10 @@ const currentAccount = () => {
     return {
         account: function () {
             return balance
-        }, 
+        },
         pay: function (amout) {
             balance -= amout
-             return balance
+            return balance
         }
     }
 }
@@ -68,12 +68,14 @@ console.log(accountBalance.pay(payAmount));
 
 // 5 arr
 let add = []
+const arr = [1, 2, 3, 4, 5, 6]
 const arrfun = () => {
-    const arr = [1, 2, 3, 4, 5, 6]
     for (i = 0; i < arr.length; i++)
         add[i] = (arr[i])
     console.log(add);
 
 }
-
 arrfun()
+
+const map = arr.map((item) => item === 4  ? 0 : item)
+console.log(map);
