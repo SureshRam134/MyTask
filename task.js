@@ -1,7 +1,6 @@
 
 
 // 1  create a function, pass the argument 
-
 const name = "suresh"
 const phone = "6369722581"
 const greenFun = (n, p) => {
@@ -33,7 +32,7 @@ const createCallback = (secure) => {
 
 cretateFun(createCallback)
 
-//  Closures
+//  3.Closures
 const closuresOuter = () => {
     let count = 0
     const closuresInner = () => {
@@ -67,7 +66,6 @@ const accountBalance = currentAccount()
 console.log(accountBalance.account());
 console.log(accountBalance.pay(payAmount));
 
-// accountBalance()
 // 5 arr
 let add = []
 const arrfun = () => {
