@@ -347,6 +347,40 @@ count.innerHTML = taskCount
 div.appendChild(ul)
 
 
+// <!--  Question - 6  -->
+
+const search = document.getElementById('search-user')
+const userdiv = document.getElementById("user-container")
+const userUl = document.createElement('ul')
+let userList = []
+
+search.addEventListener("input", () => {
+    const serchUser = search.value.toLowerCase()
+    const filteruser = userList.filter((item) => {
+        return item.name.toLowerCase().includes(serchUser)
+    })
+    displayUsers(filteruser)
+})
+
+const displayUsers = (user) => {
+    userUl.innerHTML = ''
+    console.log(user);
+    user.map((itm, inx) => {
+        const userli = document.createElement('li')
+        userli.textContent = itm?.name ? itm?.name : "No User"
+        userUl.appendChild(userli)
+    })
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    fetch('https://jsonplaceholder.typicode.com/users')
+        .then(res => res.json())
+        .then(data => {
+            userList = data
+            displayUsers(data)
+        })
+})
+userdiv.appendChild(userUl)
 
 
 
