@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Laptop",
+    "price": 55000,
+    "category": "Electronics",
+    "stock": 10,
+    "image": "https://picsum.photos/id/0/300/200"
+  },
+  {
+    "id": 2,
+    "name": "Mobile",
+    "price": 25000,
+    "category": "Electronics",
+    "stock": 15,
+    "image": "https://picsum.photos/id/1/300/200"
+  },
+  {
+    "id": 3,
+    "name": "Headphone",
+    "price": 2000,
+    "category": "Accessories",
+    "stock": 30,
+    "image": "https://picsum.photos/id/2/300/200"
+  },
+  {
+    "id": 4,
+    "name": "Keyboard",
+    "price": 1500,
+    "category": "Accessories",
+    "stock": 20,
+    "image": "https://picsum.photos/id/3/300/200"
+  },
+  {
+    "id": 5,
+    "name": "Mouse",
+    "price": 800,
+    "category": "Accessories",
+    "stock": 25,
+    "image": "https://picsum.photos/id/4/300/200"
+  },
+  {
+    "id": 6,
+    "name": "Monitor",
+    "price": 12000,
+    "category": "Electronics",
+    "stock": 8,
+    "image": "https://picsum.photos/id/5/300/200"
+  }
+]
