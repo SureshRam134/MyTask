@@ -12,7 +12,7 @@ const ApplyDarkMode = () => {
                     <div className='flex justify-between py-3 px-10 mb-5 bg-gray-200 '>
                         <div className='flex gap-3 items-center'>
                             <Link to='/' className='text-2xl'>🔙</Link>
-                            <h1 className='font-medium text-3xl ' >Product</h1>
+                            <h1 className='font-medium text-3xl ' >Apply Mode</h1>
                         </div>
                         <button className='text-base py-2 px-4 bg-blue-800 text-white rounded-md' onClick={() => { darkModeFunction() }}>{darks ? "Dark Mode" : "Light Mode"}</button>
                     </div>

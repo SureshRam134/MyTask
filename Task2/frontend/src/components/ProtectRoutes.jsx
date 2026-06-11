@@ -14,5 +14,8 @@ const TaskThree = () => {
 const TaskFour = () => {
     return <Outlet />
 }
+const TaskFive = () => {
+    return <Outlet />
+}
 
-export default { TaskOne, TaskTwo, TaskThree, TaskFour }
+export default { TaskOne, TaskTwo, TaskThree, TaskFour, TaskFive }

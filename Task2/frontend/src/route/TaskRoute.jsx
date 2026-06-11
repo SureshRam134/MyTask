@@ -6,6 +6,7 @@ import Home from '../pages/Home'
 import Product from '../pages/Product'
 import User from '../pages/User'
 import ApplyDarkMode from '../pages/ApplyDarkMode'
+import PreviousSearch from '../pages/PreviousSearch'
 
 const TaskRoute = () => {
     return (
@@ -23,6 +24,9 @@ const TaskRoute = () => {
                 </Route>
                 <Route path='/task4' element={<ProtectRoutes.TaskFour />}>
                     <Route index element={<ApplyDarkMode />} />
+                </Route>
+                <Route path='/task5' element={<ProtectRoutes.TaskFive />}>
+                    <Route index element={<PreviousSearch />} />
                 </Route>
             </Routes>
         </>
