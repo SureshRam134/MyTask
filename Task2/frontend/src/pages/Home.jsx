@@ -18,6 +18,10 @@ const Home = () => {
                     <p className='text-base text-gray-800 font-bold'>User Data Fetch and list - </p>
                     <Link to='/task3/' className='px-4 py-2 bg-gray-700 text-white rounded-md hover:bg-gray-500'>Task Three</Link>
                 </div>
+                <div className='flex gap-2 items-center'>
+                    <p className='text-base text-gray-800 font-bold'>Dark Mode Toggle - </p>
+                    <Link to='/task4/' className='px-4 py-2 bg-gray-700 text-white rounded-md hover:bg-gray-500'>Task Four</Link>
+                </div>
                 
             </div>
         </div>
