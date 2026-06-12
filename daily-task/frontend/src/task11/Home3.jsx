@@ -1,5 +1,5 @@
 import React from 'react'
-import SalaryFilter from '../task3/SalaryFilter'
+import SalaryFilter from '../task11/SalaryFilter'
 import UserFind from './UserFind'
 import ProductCard from './ProductCard'
 import CartTotal from './CartTotal'
