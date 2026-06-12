@@ -5,9 +5,17 @@ function App() {
 
   return (
     <>
-       <AllRoute/>
+      <AllRoute />
     </>
   )
 }
 
 export default App
+
+export const Add = ({ a = 6, b = 10 }) => {
+
+  return a + b
+}
+export const Sub = ({ a = 6, b = 10 }) => {
+  return a - b
+}
