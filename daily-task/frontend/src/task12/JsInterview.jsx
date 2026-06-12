@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Add, Sub } from '../App';
+import { studentData } from './Students';
 
 const JsInterview = () => {
 
@@ -65,15 +66,22 @@ const JsInterview = () => {
     employeeName,
     employeeRole
   }
-  
+
   //ques - 8
-  const userName = null; 
-  const Nullish  = userName ?? "Guest User "
+  const userName = null;
+  const Nullish = userName ?? "Guest User "
 
 
 
 
-
+  // ques 10
+  const markTotal = (...marks) => {
+    let total = 0
+    for (let i = 0; i < marks.length; i++) {
+      total += marks[i]
+    }
+    return total
+  }
 
 
 
@@ -165,6 +173,31 @@ const JsInterview = () => {
         <p>Add =  <Add a={20} b={10} /></p>
         <p>Sub =  <Sub a={20} b={10} /></p>
       </section> <br />
+
+      <section>
+        {/* question 10 -  students.js Create and Export  && Use Rest Parameter. Return total marks. */}
+        <h1>question 10 -  students.js Create and Export && Use Rest Parameter. Return total marks. </h1>
+
+        1.students.js Create and Export
+        {
+          studentData.map((itm, inx) => (
+            <div key={inx}>
+              <p>{itm?.name}</p>
+              <div>{itm?.skills.map((item, index) => (
+                <p key={index}>{item}</p>
+              ))}</div>
+              <p>{itm?.company?.name}</p>
+            </div>
+          ))
+        }
+
+        {/* Use Rest Parameter. Return total marks. */}
+        2. Use Rest Parameter. Return total marks.
+
+        <p>{markTotal(80, 56, 84, 23, 18)}</p>
+
+      </section>
+
 
     </div>
 
