@@ -4,6 +4,8 @@ import dotenv from 'dotenv'
 import { connectDB } from './config/db.js';
 import userDataStore from './modules/seeders.js';
 import userRoute from './routes.js/userRoutes.js';
+import course_route from './routes.js/courseRoute.js';
+import employee_route from './routes.js/exployeesRoute.js';
 
 
 
@@ -16,7 +18,10 @@ const allow = {
     methods:["GET", "POST", "PUT", "DELETE"]
 }
 server.use(cors(allow))
-server.use('/api', userRoute)
+server.use('/api/user', userRoute)
+server.use('/api/course', course_route)
+server.use('/api/employee', employee_route)
+
 
 connectDB().then(async() => {await userDataStore() })
 server.listen(PORT,() => {

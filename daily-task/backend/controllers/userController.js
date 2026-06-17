@@ -14,3 +14,15 @@ export const  getUserdata = async (req, res) => {
         return response(res, 501, "internal server error", error.message) 
     }
 }
+
+
+export const registerFunction = async (req, res) => {
+
+    try {
+        response(res, 200, "User SuccessFully Register")
+    } catch (error) {
+        console.log(error.messages);
+        
+         response(res, 501, "Internal server errer", error.message)
+    }
+} 
