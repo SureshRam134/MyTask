@@ -266,7 +266,7 @@ const duplicate = (num) => {
     return result
 }
 
-console.log(duplicate([1, 2, 3, 2, 4, 1, 5]), 897);
+console.log(duplicate([1, 2, 3, 2, 4, 1, 5]), 897); 
 
 
 
@@ -276,7 +276,7 @@ console.log(duplicate([1, 2, 3, 2, 4, 1, 5]), 897);
 const missingNum = (num) => {
 
     for(let i = 0; i < num.length; i++){
-        if(num[i+1] -num[i] !==1) return num[i] + 1
+        if(num[i+1] - num[i] !==1) return num[i] + 1
     }
 
 }
@@ -297,4 +297,145 @@ const longestWord = (str) => {
 }
 
 console.log(longestWord("I love JavaScript programming"));
+
+
+// 1. Find the Second Largest Number in an Array
+// [10, 5, 20, 8, 15]
+// Output: 15
+
+const SecondLargest = (arr) => {
+    let largest = arr[0]
+    let secondLargest = arr[0]
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] > largest){
+            secondLargest = largest
+            largest = arr[i]
+        }
+        else if(arr[i] > secondLargest && arr[i] !== largest) {
+            secondLargest = arr[i]
+        }
+    }
+    return secondLargest 
+
+}
+console.log(SecondLargest([22, 20 , 15, 30, 23]));
+
+
+// 2. Count the Occurrence of Each Character in a String
+// Input: "programming"
+// Output:
+// {
+//   p: 1,
+//   r: 2,
+//   o: 1,
+//   g: 2,
+//   a: 1,
+//   m: 2,
+//   i: 1,
+//   n: 1
+// }
+
+const Occurrence = (str) => {
+    result= {}
+    for(let i =0; i < str.length; i++) {
+        let char = str[i]        
+        if(result[char]) result[char] ++
+        else result[char] = 1
+    }
+    return result
+}
+
+console.log(Occurrence("sureshram"));
+
+// 3. Find the First Non-Repeating Character in a String
+// Input: "aabbcdeff"
+// Output:c
+
+  
+const non_Repeating = (str)  =>{
+    let result =  {}
+    for(let i = 0 ; i < str.length ; i++) {
+        let char = str[i]
+        if(result[char]) result[char]++ 
+        else result[char] = 1
+    }
+    for(let i = 0; i < str.length; i++) {
+        if(result[str[i]] === 1) return str[i]
+    }
+}
+
+console.log(non_Repeating("aabbcdeff"));
+
+
+// todat - 19/06/26
+//1.  Find the Element That Appears Only Once
+// Input:
+// [1, 2, 3, 2, 1, 4, 4]
+
+// Output:
+// 3
+const findNoRepeat = (arr) => {
+    let result = {}
+    for(let i = 0 ; i < arr.length; i++) {
+        let num = arr[i] 
+        if(result[num]) result[num] ++
+        else result[num] = 1
+    }
+    for(let k in result) {
+        if(result[k] === 1) return Number(k)
+    }
+}
+console.log(findNoRepeat([1, 2, 3, 2, 1, 4, 4]));
+
+
+
+
+// 2. Check Whether Two Strings are Anagrams
+// Input:
+// "listen"
+// "silent"
+
+// Output:
+// true
+
+const Anagrams = (str1, str2) => {
+    if(str1.length !== str2.length) return false
+    let result = {}
+    for(let i = 0 ; i< str1.length ; i++) {
+        let char = str1[i]
+        if(result[char]) result[char] ++
+        else result[char] = 1
+    }
+
+    for(let i = 0 ; i< str2.length ; i++) {
+        let char = str2[i]
+        if(!result[char]) return false
+        result[char] --
+    }
+    return true
+}
+console.log(Anagrams("listen", "silent"));
+
+
+// 3. Move All Zeros to the End
+// Input:
+// [1, 0, 2, 0, 3, 4, 0]
+
+// Output:
+// [1, 2, 3, 4, 0, 0, 0]
+
+const moveZeroLast = (arr) => {
+    result = []
+    count = 0
+    for(let i = 0 ; i < arr.length; i++) {
+        if(arr[i] !== 0 ) result.push(arr[i])
+        else count++
+    }
+    for(let i = 0 ; i < count ; i++) {
+         result.push(0)
+    } 
+    return result
+}
+
+console.log(moveZeroLast([1, 0, 2, 0, 3, 4, 0]));
 
