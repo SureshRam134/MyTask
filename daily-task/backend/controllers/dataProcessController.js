@@ -5,11 +5,11 @@ export const dataProcessBody = async (req, res) => {
 
     console.log(req.body);
     try {
-        const { email, password } = req.body
+        const { name, age } = req.body
         const data = {
-            email, password
+            name, age
         }
-        if (!email || !password) return response(res, 400, "please enter email or password")
+        if (!name || !age) return response(res, 400, "please enter name or age")
         return response(res, 200, "response done", data)
 
     } catch (error) {
@@ -62,13 +62,34 @@ export const dataProcessParams = async (req, res) => {
 
 export const dataProcessQuery = async (req, res) => {
 
-    console.log(req.query);
+    const {name} = req.query
     try {
-        response(res, 200, "response done", req.query)
+        if(!name) return response(res, 404, "name not found")
+        response(res, 200, "response done", name)
     } catch (error) {
         console.log(error.message);
 
         response(res, 501, "internal server error", error.message)
+    }
+
+
+}
+
+export const studentData = async (req, res) => {
+
+    console.log(req.body);
+    try {
+        const { name, course, city } = req.body
+        const data = {
+            name, course, city 
+        }
+        if (!name || !course || !city) return response(res, 400, "please enter name or city or course")
+        return response(res, 200, "response done", data)
+
+    } catch (error) {
+        console.log(error.message);
+
+        return response(res, 501, "internal server error", error.message)
     }
 
 
