@@ -8,6 +8,7 @@ import Home12 from '../task12/Home12'
 import ResultSystem from '../task15/ResultSystem'
 import EmployeeAttendanceTracker from '../task15/EmployeeAttendanceTracker'
 import MovieTicketBooking from '../task15/MovieTicketBooking'
+import ArrayAndObject from '../task30/ArrayAndObject'
  
 
 
@@ -28,6 +29,11 @@ const AllRoute = () => {
           <Route path='attendance-tracker' element={<EmployeeAttendanceTracker />} />
           <Route path='movie-ticket-booking' element={<MovieTicketBooking />} />
         </Route>
+        <Route path='/task30' element={<ProtectRoute.Task12 />} >
+          <Route index element={<ArrayAndObject />} />
+        </Route>
+
+
       </Routes>
     </div>
   )

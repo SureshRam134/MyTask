@@ -146,7 +146,7 @@ const wordsCount = (str) => {
     return count
 }
 
-console.log(wordsCount("I love JavaScript"), 987);
+console.log(wordsCount("I love JavaScript"), "suresh");
 
 
 
@@ -438,4 +438,75 @@ const moveZeroLast = (arr) => {
 }
 
 console.log(moveZeroLast([1, 0, 2, 0, 3, 4, 0]));
+
+
+// today
+// 1. Find the Intersection of Two Arrays
+// Input:
+// [1, 2, 3, 4]
+// [3, 4, 5, 6]
+
+// Output:
+// [3, 4]
+
+const findCommonValue = (arr1, arr2) => {
+   let  result = []
+   for(let i = 0 ; i < arr1.length ; i++) {
+    for(let j = 0; j < arr2.length ; j++) {
+        if(arr1[i] === arr2[j]) result[result.length] = arr1[i]
+    }
+   }
+   return result
+}
+
+console.log(findCommonValue([1, 2, 3, 4], [3, 4, 5, 6]));
+
+// 2. Find the Maximum Consecutive Occurrence of a Character
+// Input:
+// "aaabbccccdde"
+
+// Output:
+// 4
+const maxCount = (str) => {
+    let count = 1
+    let max = 1
+    for(let i = 0 ; i< str.length ; i++) {
+        if(str[i] === str[i+1]){
+            count++
+        }else {
+            if(count > max) {
+                max = count
+            }
+            count = 1
+        }
+    }
+    return max
+}
+
+console.log(maxCount('aaabbccccdde'));4
+
+// Rotate Array Left by One Position
+// Input:
+// [1, 2, 3, 4, 5]
+
+// Output:
+// [2, 3, 4, 5, 1]
+
+const rotateLeft = (arr) => {
+    let first = arr[0]
+        for(let i = 0; i < arr.length-1 ; i++){
+        arr[i] = arr[i+1]
+        console.log(arr);
+        
+    }
+    arr[arr.length - 1 ] = first
+    return arr
+}
+
+console.log(rotateLeft([1, 2, 3, 4, 5]));
+
+
+
+
+
 

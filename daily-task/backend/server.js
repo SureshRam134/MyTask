@@ -7,6 +7,7 @@ import userRoute from './routes.js/userRoutes.js';
 import course_route from './routes.js/courseRoute.js';
 import employee_route from './routes.js/exployeesRoute.js';
 import dataProcessRoute from './routes.js/dataProcessRoute.js';
+import insertRoute from './routes.js/insertRoute.js';
 
 
 
@@ -23,6 +24,7 @@ server.use('/api/user', userRoute)
 server.use('/api/course', course_route)
 server.use('/api/employee', employee_route)
 server.use('/api/data', dataProcessRoute)
+server.use('/api/insert-user', insertRoute)
 
 
 connectDB().then(async() => {await userDataStore() })
